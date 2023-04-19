@@ -254,6 +254,61 @@ header nav .mode .mode-switch.active::after{
     transition-duration: 200ms;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 }
 
-#lateral button span{}
+#lateral button::after{
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-duration: 200ms;
+}
+
+#lateral button:hover::after{
+    width: 100%;
+}
+
+#lateral button span{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    transition-duration: 200ms;
+}
+
+#lateral button span ion-icon{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+
+#lateral button:hover span{
+    color: #FFFFFF;
+}
+
+.btn{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    background-color: #FFC107;
+    color: #455A64;
+    cursor: pointer;
+    border-radius: 20px;
+    transition-duration: 200ms;
+}
+.btn:hover{
+    background-color: #455A64;
+    color: #FFC107;
+}
+.btn:last-child{
+    margin-left: 16px;
+}
